@@ -56,8 +56,8 @@ namespace ArtAuction
 
         private async void PageFader_Tapped(object sender, EventArgs e)
         {
-            BidPopup.TranslateTo(0, Height, AnimationSpeed, Easing.SinInOut);
-            ArtistDetailsPopup.TranslateTo(0, Height, AnimationSpeed, Easing.SinInOut);
+            await BidPopup.TranslateTo(0, Height, AnimationSpeed, Easing.SinInOut);
+            await ArtistDetailsPopup.TranslateTo(0, Height, AnimationSpeed, Easing.SinInOut);
             await PageFader.FadeTo(0, AnimationSpeed, Easing.SinInOut);
             PageFader.IsVisible = false;
         }
